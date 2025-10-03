@@ -111,5 +111,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Team
 
-Created by [AstraNova] for the NASA Space Apps Challenge 2023
+Created by [AstraNova] for the NASA Space Apps Challenge 2025
 
