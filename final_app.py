@@ -330,16 +330,28 @@ def display_model_details():
             st.pyplot(fig)
         
         st.markdown("---")
-        st.subheader("Confusion Matrix")
-        image_path = "images/koi/koi_confusion_matrix.jpg"
-        if os.path.exists(image_path):
-            st.image(image_path, caption="Confusion Matrix on the test set, showing actual vs. predicted labels.")
-        else:
-            st.warning(f"Image not found at `{image_path}`. Please create the folder and add the renamed image.")
+        st.subheader("Model Evaluation Visuals")
+        col1, col2 = st.columns(2)
+        with col1:
+            image_path = "images/koi/koi_confusion_matrix.jpg"
+            if os.path.exists(image_path):
+                st.image(image_path, caption="Confusion Matrix on the test set, showing actual vs. predicted labels.")
+            else:
+                st.warning(f"Image not found at `{image_path}`.")
+        with col2:
+            image_path = "images/koi/koi_roc_auc.png"
+            if os.path.exists(image_path):
+                st.image(image_path, caption="ROC AUC Curve, demonstrating the model's ability to distinguish between classes.")
+            else:
+                st.warning(f"Image not found at `{image_path}`.")
             
         st.markdown("---")
         st.subheader("Feature Importance")
-        st.info("Feature importance plots for the KOI base models are not available at this time but would be displayed here.")
+        image_path = "images/koi/koi_feature_importance.png"
+        if os.path.exists(image_path):
+            st.image(image_path, caption="Top features influencing the model's predictions, derived from the LightGBM base model.")
+        else:
+            st.warning(f"Image not found at `{image_path}`.")
 
 
 # ==============================================================================
