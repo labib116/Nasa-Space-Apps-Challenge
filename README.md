@@ -111,5 +111,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Team
 
-Created by [Your Team Name] for the NASA Space Apps Challenge 2023
-- Labib Hasan ([@labib116](https://github.com/labib116))
+Created by [AstraNova] for the NASA Space Apps Challenge 2023
+
