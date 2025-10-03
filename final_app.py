@@ -315,8 +315,8 @@ def display_model_details():
 
         col1, col2 = st.columns([1.5, 1.5])
         with col1:
-            st.metric("Overall Accuracy", "0.9587")
-            st.metric("Weighted ROC AUC", "0.9928")
+            st.metric("Overall Accuracy", "0.9326")
+            st.metric("Weighted ROC AUC", "0.9885")
             st.dataframe(koi_report_df)
         
         with col2:
@@ -349,7 +349,7 @@ def display_model_details():
         st.subheader("Feature Importance")
         image_path = "images/koi/koi_feature_importance.png"
         if os.path.exists(image_path):
-            st.image(image_path, caption="Top features influencing the model's predictions, derived from the LightGBM base model.")
+            st.image(image_path, caption="Top features influencing the model's predictions, derived from the Random Forest base model.")
         else:
             st.warning(f"Image not found at `{image_path}`.")
 
